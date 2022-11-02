@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fuente  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- style -->
+    <link rel="stylesheet" href="resources/css/main.css">
+    <link rel="stylesheet" href="resources/css/login1.css">
+    <title>Dream Store - Ecommerce</title>
+</head>
+<body>
+	<header class="header">
+        <div class="header__logo"><img src="resources/images/logo.png" alt=""></div>
+        <div class="header__nav">
+            <nav>
+                <ul class="header__nav-enlaces">
+                    <li><a href="#">Mujeres</a></li>
+                    <li><a href="#">Hombres</a></li>
+                    <li><a href="#">Niños</a></li>
+                
+                    <div><span class="material-symbols-outlined">
+                        search
+                    </div></span>
+                    <p><span class="material-symbols-outlined">
+                        person
+                        </span>
+                    </p>
+                    <p><span class="material-symbols-outlined">
+                        shopping_bag
+                        </span>
+                    </p>
+                </ul>
+            </nav>
+                <button class="ham" type="button">
+                    <span class="br-1"></span>
+                    <span class="br-2"></span>
+                    <span class="br-3"></span>
+                </button>
+            
+        </div>
+    </header>
+    <section class="main">
+        <div class="section__left">
+            <p class="section__left-register">Registrarse</p>
+            <p class="section__left-login">Iniciar sesión</p>
+            <p class="section__left-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero accusamus itaque assumenda provident molestias quaerat alias.</p>
+            
+            <form action="/auth" method="POST" class="section__left-formuario">
+                <label for="email"> Email</label>
+                <input type="text" name="email" required>
+
+                <label for="pass"> Contraseña</label>
+                <input type="password" name="pass" required>
+
+                <button class="formulario-button">iniciar sesión</button>
+            </form>
+            <p class="section__left-remember-pass">¿Olvidaste tu contraseña?</p>
+        </div>
+        <div class="section__rigth">
+            <img src="resources/images/young-woman-boxer-training-at-the-gym.jpg" alt="">
+        </div>
+    </section>
+    <footer class="footer">
+        <div>
+            <ul>
+                <li><a href="#">Acerda de la empresa</a></li>
+                <li><a href="#">Terminos y condiciones</a></li>
+                <li><a href="#">Politicas de privacidad</a></li>
+                <li><a href="#">Envíos</a></li>
+                <li><a href="#">Politica de reembolso</a></li>
+            </ul>
+        </div>
+        <div class="footer__suscribe">
+            <p>Suscríbete para conocer más sobre nuestra marca, nuestros 
+                productos y promociones exclusivas.</p>
+            <input type="text" name="" id="" placeholder="E-mail">
+            <button>Suscribirse</button>
+        </div>
+        <div class="footer__redes">
+            <img src="resources/icons/logo_instagram.png" alt="insta">
+            <img src="resources/icons/logo_facebook.png" alt="face">
+            <img src="resources/icons/logo_youtube.png" alt="youtube">
+        </div>
+    </footer>
+		
+		
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+   <% if (typeof alert != "undefined")  { %>
+    <script>
+    Swal.fire({
+      title:'<%= alertTitle %>',
+      text:'<%= alertMessage %>',
+      icon:'<%= alertIcon %>',
+      showConfirmButton: <%= showConfirmButton %>,
+      timer: <%= timer %>
+    }).then(()=>{
+      window.location='/<%= ruta %>'
+    })
+    </script>
+  <% } %>
+	</div>
+</body>
+</html>
